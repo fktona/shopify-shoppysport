@@ -8,8 +8,8 @@ CollectionSection() {
 <div className="h-screen z-30 herobg max-h-[70vh]  flex items-center">
 	<section className="bg-cover z-30 bg-center py-32 w-full">
 		<div className="container mx-auto text-left text-white">
-			<div className="flex items-center px-16">
-				<div className="lg:w-1/2">
+			<div className="flex items-center lg:px-16 pc-5">
+				<div className="lg:w-1/2 w-full px-6">
 					<h1 className="text-5xl font-medium mb-6">FITNESS EQUIPMENTS</h1>
 					<p className="text-xl mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
 						euismod odio, gravida pellentesque urna varius vitae.</p>

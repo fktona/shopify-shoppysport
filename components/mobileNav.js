@@ -23,7 +23,7 @@ export default function MobileNav() {
     setAniLeft(true);
     setTimeout(() => {
       handleOpenMenu();
-    }, 1000);
+    }, 10);
   };
   const segment = useSelectedLayoutSegment();
   return (
@@ -33,6 +33,7 @@ export default function MobileNav() {
       className={`lg:hidden top-0 z-[1000] menu fixed bottom-0 w-[80%]   h-full`}>
         <p className="text-white absolute top-6 left-4 text-xl font-bold text-center pt-4">  SHOPPYSTORE</p>
         <ul className="flex flex-col gap-8 justify-center items-start w-fit mx-auto    ">
+          <Link href={'/#hero'}>
           <li
             onClick={() => handleCloseMenu(homeRef)}
             className={`text-white text-3xl font-bold cursor-pointer
@@ -42,6 +43,8 @@ export default function MobileNav() {
           >
            <span className=" menuli">Home</span>
           </li>
+          </Link>
+          <Link href={'/shop'}>
           <li
             onClick={() => handleCloseMenu(shopRef)}
             className={`text-white text-3xl font-bold overflow-hidden cursor-pointer ${
@@ -50,18 +53,29 @@ export default function MobileNav() {
           >
             <span className="menuli">Shop</span>
           </li>
+          </Link>
+          <Link href={'/#product'}>
           <li
-          onClick={() => handleCloseMenu(productRef)}
-            className={`text-white text-3xl font-bold overflow-hidden cursor-pointer ${
-              aniLeft ? "left-[]" : "left-0"
-            }`}
-          >Products</li>
+          onClick={() => handleCloseMenu(shopRef)}
+            className={`text-white text-3xl font-bold cursor-pointer
+             text-start  bottom-0 overflow-hidden relative mb-2 
+              ${aniLeft ? "left-[]" : "left-0"}
+            `}
+          >
+           <span className=" menuli">Product</span>
+          </li>
+          </Link>
+          <Link href={'/'}>
           <li
-          onClick={() => handleCloseMenu(contactRef)}
-            className={`text-white text-3xl font-bold overflow-hidden cursor-pointer ${
-              aniLeft ? "left-[]" : "left-0"
-            }`}
-          >Contact</li>
+          onClick={() => handleCloseMenu(shopRef)}
+            className={`text-white text-3xl font-bold cursor-pointer
+             text-start  bottom-0 overflow-hidden relative mb-2 
+              ${aniLeft ? "left-[]" : "left-0"}
+            `}
+          >
+           <span className=" menuli">Contact</span>
+          </li>
+          </Link>
         </ul>
     
     </nav>
