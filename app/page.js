@@ -2,7 +2,7 @@ import { getProductsInCollection } from "../lib/shopify"
 import ProductList from "../components/ProductList"
 import Hero from "../components/Hero"
 import Head from 'next/head'
-import CollectionSection from "../components/CollectionSection"
+import CollectionSection from "../components/collectionSection"
 
 export default async function Home() {
 
