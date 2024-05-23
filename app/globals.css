@@ -17,13 +17,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
 }
 
 @layer utilities {
@@ -31,3 +25,115 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.herobg{
+  position: relative;
+  background-image: url('/herobg.jpg');
+  background-size: 100% 100%;
+  /* animation: fadeIn 5s ease-in-out infinite; */
+  
+}
+
+
+@keyframes fadeIn {
+  0% {
+   background-image: none;
+  }
+  10% {
+    background-image: url('/tt.png');
+  }
+  30% {
+    background-image: url('/bb.png');
+  }
+  60% {
+    background-image: url('/cc.png');
+  }
+  100% {
+    background-image: url('/rr.png');
+  }
+}
+
+.herobg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.45)
+  );
+
+
+}
+
+.stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+
+.menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-repeat: no-repeat;
+  background-size: 100% 1%;
+  background-image: linear-gradient(90deg, #341A1D 0%, #341A1D 100%);
+ 
+  animation: fadeIn3 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn3 {
+  0% {
+    background-size: 0% 1%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.menuli{
+  
+  position: relative;
+  animation: li 0.3s linear 0.4s forwards;
+  bottom: -50px;
+  
+}
+
+@keyframes li {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.menuli:hover{
+  color: #FFB72B;
+
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(-20deg);
+  }
+  100%{
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes flowLeft{
+  0%{
+    left: 0;
+  }
+  100%{
+    left:  -100%;
+  }
+}
+
